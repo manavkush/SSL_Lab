@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\renewcommand{\baselinestretch}{0.9}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\graphicspath{{./images/}}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algcompatible}% http://ctan.org/pkg/algorithmicx
+
+\begin{document}
+
+
+\title{\textbf{Assignment 1} }
+\author{Manav Kushwaha \\
+2nd Year, CSE, IIT Dharwad \\
+\texttt{190010023@iitdh.ac.in}}
+\date{\today}
+\maketitle
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/IITDH.jpg}
+    \caption{IIT-Dharwad}
+    \label{fig:IIT-Logo}
+\end{figure}
+
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+\section{Maths Section}
+\label{sec:math}
+    \hfill
+    \subsection{Inline mathematical expression}
+         $$C(n,r) = n!/(r! (n - r)!)$$
+    
+    \subsection{Non-numbered Equation}
+        $$a = b + c/d$$
+        
+    \subsection{Numbered Equation}
+        $$10*2+5=25$$
+        
+    \subsection{Multiline Equation}
+        \begin{equation}    \label{eq:multiline eq}
+        \begin{aligned}
+            h = & \sqrt{(a+b)^2-4ab} \\ 
+              = & \sqrt{(a-b)^2} \\  
+              = & |a-b|   
+        \end{aligned}
+        \end{equation}
+    
+    \subsection{Matrices}
+        \begin{equation}
+            \centering  
+            \begin{bmatrix}
+            a & b & c \\
+            1 & 2 & 3\\
+            
+            \end{bmatrix}
+            \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0\\
+            0 & 0 & 1\\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                a & b & c \\
+                1 & 2 & 3\\
+            \end{bmatrix}
+        \end{equation}
+    
+    \subsection{Square root}
+        $$\sqrt{a+b*c}$$
+    
+    \subsection{Summation}
+        $$\sum_{i=0}^{10}i = 10*(10+1)/2 = 55$$
+        
+    \subsection{Integration}
+        $$\int_0^{\pi/2}sinx~dx = 1$$
+    
+    \subsection{Nested Brackets}
+        \[
+           \Bigg\{xy\bigg\{z \Big\{\frac{x_1}{y_1}\Big\}\bigg\}\Bigg\}
+        \]
+    \subsection{Fractions}
+        \[
+            \Bigg\{\frac{\bigg(\frac{a}{b}\bigg)}{c}\Bigg\}
+        \]
+\section{Font Styles}
+        The font settings are following:
+        
+        \hfill
+        
+        \textbf{Bold-Font}
+        
+        \textit{Italic}
+        
+        \texttt{This is an example of teletype font} 
+        
+        \textsc{This is an Example of Small Capitals}
+\section{Colors}
+    The color settings are following:
+    
+    \textcolor{orange}{This text is orange}
+    
+    \colorbox{cyan}{The colour of the text background is Cyan}
+    
+    \pagecolor{yellow}{The colour of the background page is yellow}
+    \newpage
+    \pagecolor{white}
+
+\section{Lists}
+
+\textbf{This is an example of mixed lists}
+
+\begin{enumerate}
+    \item You can mix list environments as much as you like
+    \begin{itemize}
+        \item But it might start to look silly
+        \item[*] With different symbols
+    \end{itemize}
+    \item So do remember
+    \begin{description}
+        \item[Word 1] This is the definition of the word 1.
+        \item[Word 2] This is the definition of the word 2.
+    \end{description}
+\end{enumerate}
+
+\section{Referencing and Crosslinking}
+
+The examples are the following:
+\hfill
+
+We have seen various examples in the Maths section i.e. section~\ref{sec:math}
+
+We have seen the Logo of IIT Dharwad, Figure~\ref{fig:IIT-Logo} on the page~\pageref{fig:IIT-Logo}
+
+We have the multilined equation~\ref{eq:multiline eq} on Page~\pageref{eq:multiline eq}
+
+% \newpage
+% % This is a comment line :)
+\section{Tables}
+
+We have a multicolumn and multirow table as an example in this section.
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||p{2cm} |p{2cm} |p{2cm} |p{2cm} ||}
+    \hline
+     1,1 & 1,2 & 1,3 & 1,4  \\
+     \hline
+     \hline
+     2,1 & 2,2 & 2,3 & 2,4 \\
+     \hline
+     3,1 & 3,2 & 3,3 & 3,4 \\
+     \hline
+     4,1 & 4,2 & 4,3 & 4,4 \\
+     \hline 
+\end{tabular}
+    \caption{Test-Table}
+    \label{tab:Test-Table}
+\end{table}
+
+\newpage
+
+\section{Pseudocode of Quicksort}
+% \textbf{This is the pseudocode of quicksort}
+
+\begin{algorithm}
+        \caption{Quicksort}
+        \label{algorithm:quicksort}
+        \begin{algorithmic}[1]
+            \STATE Given: Array a and it's size n.
+            \STATE
+            \STATE We start by passing array into the function along with end positions of the array
+            \STATE 
+            \STATE Quicksort(Array a,int p,int r) \hfill    ....\COMMENT {p and r are initial and final positions}
+                \begin{algorithmic}[1]
+                    \IF{$i < f$}
+                    \STATE $q = Partition(a,p,r)$
+                    \STATE $Quicksort(a,p,q)$
+                    \STATE $Quicksort(a,q+1,r)$
+                    \ENDIF  
+                \end{algorithmic}
+            \STATE
+            \STATE Partition(Array a,int p,int r)
+            \begin{algorithmic}[1]
+                \STATE $x = a[r]$ \hfill     .....\Comment{Choosing pivot}
+                \STATE $i = p-1$
+                \STATE $j = r+1$
+                \STATE
+                \FOR{$j = p$ \textbf{to} $r-1$}
+                \IF{$a[j] \leq x$}
+                \STATE $i = i+1$
+                \STATE exchange $a[i]$ with $a[j]$
+                \ENDIF
+                \ENDFOR
+                
+                \noindent \STATE exchange $a[i+1]$ with $a[r]$
+                \STATE \textbf{return} $i+1$
+               
+            \end{algorithmic}
+            
+        \end{algorithmic}
+\end{algorithm}
+\newpage
+\section{Bibliography}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+In \cite{Cormen2009IntroductionTA}, The authors have explained the quicksort pseudocode. This pseudocode was used in Algorithm~\ref{algorithm:quicksort}.
+
+In \cite{qsort}, The author has given the pseudocode for the quicksort which inturn helped me to gain insight into the algorithm
+
+In \cite{9117073}, The Authors has researched on dectecting Regions At Risk for Spreading COVID-19 Using Existing Cellular Wireless Network Functionalities
+
+In \cite{1527552}, The authors have explained about machine learning.
+
+In \cite{5641441}, The author have explained about artificial intelligence.
+
+\end{document}
