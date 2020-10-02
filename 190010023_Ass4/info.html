@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>User Information</title>
+    <style>
+        body{
+            background-color: #ffc7c7;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        tr:nth-child(even) {background-color: #c3aed6;}
+    </style>
+    <script>
+        class User {
+                constructor(fname,add,phone,mail,edu,age){
+                    this.fname = fname;
+                    this.add = add;
+                    this.phone = phone;
+                    this.Email = mail;
+                    this.Education = edu;
+                    this.age = age;
+                }
+            }
+
+        function display(form){
+            testClass = new User(form.elements[0].value,form.elements[1].value,form.elements[2].value,form.elements[3].value,form.elements[4].value,form.elements[5].value);
+            // alert(testClass.fname);
+            document.getElementById("tablename").innerHTML=testClass.fname;
+            document.getElementById("tableadd").innerHTML=testClass.add;
+            document.getElementById("tablephone").innerHTML=testClass.phone;
+            document.getElementById("tableemail").innerHTML=testClass.Email;
+            document.getElementById("tableedu").innerHTML=testClass.Education;
+            document.getElementById("tableage").innerHTML=testClass.age;
+
+            // alert(document.getElementById("tablename").innerHTML);
+            document.getElementById("output").style.visibility="visible";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Information</h1><br>
+
+    <div class="input-forms">
+        <form >
+
+            <label for="Name" >Enter the Name: </label>             <!-- Name -->
+            <input type="text" name="Name" id="fname"><br><br>
+    
+            <label for="Address" >Enter the address: </label>       <!-- Address -->
+            <input type="text" name="Address" id="add"><br><br>
+            
+            <label for="Phone" >Enter the phone number: </label>        
+            <input type="number" name="Phone" id="phone"><br><br>
+            
+            <label for="mail" >Enter the Email: </label>            
+            <input type="email" name="mail" id="mail"><br><br>
+            
+            <label for="edu" >Enter the Educational Qualifications: </label>    
+            <input type="text" name="edu" id="edu"><br><br>
+            
+            <label for="age" >Enter the Age: </label>          
+            <input type="number" name="age" id="age"><br><br>
+            
+            <input type="button" onclick="display(form)" value="submit">
+        </form>
+    </div>
+    
+    <div>
+        <table id="output" style="visibility: hidden;">
+            <tr>
+                <td>User.Name</td>
+                <td id="tablename"></td>
+            </tr>
+            <tr>
+                <td>User.Address</td>
+                <td id="tableadd"></td>
+            </tr>
+            <tr>
+                <td>User.Phone Number</td>
+                <td id="tablephone"></td>
+            </tr>
+            <tr>
+                <td>User.EmailID</td>
+                <td id="tableemail"></td>
+            </tr>
+            <tr>
+                <td>User.Educational Qualifications</td>
+                <td id="tableedu"></td>
+            </tr>
+            <tr>
+                <td>User.Age</td>
+                <td id="tableage"></td>
+            </tr>
+        </table>
+    </div>
+    
+
+
+
+</body>
+</html>

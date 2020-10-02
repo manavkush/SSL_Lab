@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+    <style>
+        body{
+            background-color: #ffc7c7;
+        }
+    </style>
+    <script>
+        function check() {
+            var x = document.getElementById("str").value;
+            var n = x.length;
+            
+            for(var i=0;i<n/2;i++)
+            {
+                if(x[i]===x[n-1-i])
+                    continue;
+                else
+                {
+                    alert("Not a palindrome!");
+                    return false;
+                }
+            }
+            alert("String is a palindrome!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Palindrome Checker</h1><br>
+
+    <form name="myForm" onsubmit="check()">
+        <label for="strng" >Enter the string: </label>
+        <input type="text" name="strng" id="str"><br>
+        <input type="submit" name="Submit" id="str">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency</title>
+    <style>
+        body{
+            background-color: #f1f3f8;
+        }
+    </style>
+    <script>
+        function check() {
+            var x = document.getElementById("str").value;
+            var n = x.length;
+            var freq= {};
+
+            for(var i=0;i<n;i=i+3)
+            {
+                if(x[i] in freq)
+                    freq[x[i]]++;
+                else
+                    freq[x[i]]=1;
+            }
+
+            var max=0;
+            var maxelmnt=' ';
+            for(temp in freq)
+            {
+                if(freq[temp]>max)
+                {
+                    max=freq[temp];
+                    maxelmnt=temp;
+                }
+            }
+            // alert("Most Frequent character: "+maxelmnt);
+            // alert("Most Number of Occurances: "+max);
+            // return true;
+            var output1="Most Frequent character: "+maxelmnt;
+            var output2="Most Number of Occurances: "+max;
+            document.getElementById("output-list").style.visibility = "visible";
+            document.getElementById("input-string").innerHTML=x;
+            document.getElementById("output-char").innerHTML="Most Frequent character: "+ maxelmnt;
+            document.getElementById("output-freq").innerHTML="Number of occurrences: "+max;
+            
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Frequency</h1><br>
+
+    <form name="myForm" onsubmit="check()">
+        <label for="strng" >Enter the string: </label>
+        <input type="text" name="strng" id="str">
+        <input type="button" onclick="check()" value="Submit">
+    </form>
+    <div>
+        <ul type="circle" id="output-list" style="visibility: hidden;">
+            <li>Input</li>
+                <ul type="square">
+                    <li id="input-string"></li>
+                </ul>
+            <li>Output</li>
+                <ul type="square">
+                    <li id="output-char"></li>
+                    <li id="output-freq"></li>
+                </ul>
+        </ul>
+
+    </div>
+</body>
+</html>

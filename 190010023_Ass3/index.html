@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Assignment</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+    <!-- Table,emphasis, strong, images, heading -->
+
+    <table cellspacing="20" width=100%>
+        <tr>
+          <td></td>
+          <td><img src="multimedia/face.png" alt="Manav's picture"></td>
+          <td>
+            <h1>Manav Kushwaha</h1>
+            <p><em>Student at <strong>IIT DHARWAD</strong>.</em></p>
+          </td>
+        </tr>
+    </table>
+    <hr>
+
+    <!-- Lists  -->
+
+    <h2>List, Formatting tags and Phrase Tags</h2>
+    <ul>
+        <li><abbr title = "Abrreviation">Abbr</abbr></li>
+        <li> Second Element of the list
+            <ol>
+                <li><strong>List inside a list in bold</strong></li>
+                <li><u>Underlined</u></li>
+                <ul>
+                    <li><i>Italic</i></li>
+                </ul>
+            </ol>
+        </li>
+        <li>Third Element</li>
+        <li><q>This is an example of quotation tags</q></li>
+    </ul>
+    <hr>
+
+    <!-- Embedding the images, videos from the internet-->
+    
+    <h2>Embedding</h2>
+    <ul>
+        <li>Image</li> <br><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg" alt="Nature's beauty">
+        <br><br> <br>
+        <li>Video from youtube</li>
+        <!-- We can embedd any video from youtube as follows -->
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dj4VoPO-2pE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br>
+        <li>Video</li>
+        <video width="560" height="320" controls>
+            <source src="./multimedia/katharsis.mp4" type="video/mp4">
+            
+          Your browser does not support the video tag.
+        </video><br><br><br>
+        <li>Audio</li>
+        <audio controls>
+            <caption>Unravel by TK</caption>
+            <source src="./multimedia/unravel.mp3">
+            Your browser does not support mp3 format.
+        </audio>
+    </ul>
+    <hr>
+
+    <!-- Div and span -->
+    <h2>Block Elements and Layouts</h2>
+    <div>
+        <div class="block1" style="color:orangered;" >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis blanditiis reprehenderit aut alias quaerat, nostrum, ratione cum ipsum aliquid dicta distinctio vero atque eum libero animi! Ipsam possimus natus consequuntur!
+          Lorem ipsum, dolor sit <span style="color: blue; background-color: white;">This is using a span.</span> amet consectetur adipisicing elit. Eos laborum consequatur laboriosam animi incidunt, expedita ratione. Alias sapiente deserunt est quam voluptates non, numquam ab explicabo in provident eos accusamus?
+        </div>
+        <div class="block2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae architecto possimus saepe, cumque explicabo. Error fugiat nesciunt facilis maiores quas? Illo inventore incidunt unde alias architecto quibusdam fugiat eius!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, incidunt nesciunt, dolore neque dolorum consequatur harum saepe iusto velit,<span style="color: brown; background-color: cyan;">This is using a span.</span> laborum tempore sequi. Nesciunt ex consequatur sunt unde sapiente quos porro?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis eum impedit quibusdam adipisci, molestiae dolorem consequuntur exercitationem eligendi reiciendis. Quisquam voluptatum dignissimos, expedita excepturi ipsam suscipit quibusdam dolorum perspiciatis voluptas!
+        </div>
+    </div>
+    <hr>
+
+    <!-- Tables -->
+
+    <h3>Table</h3>
+    <table class="table" cellspacing="10" style="width:100%">
+      <tr>
+        <td>1,1 </td>
+        <td>1,2</td>
+        <td>1,3</td>
+
+      </tr>
+      <tr>
+        <td>2,1</td>
+        <td>2,2</td>
+        <td>2,3</td>
+      </tr>
+      <tr>
+        <td>3,1</td>
+        <td>3,2</td>
+        <td>3,3</td>
+      </tr>
+    </table>
+    <hr>
+    <!-- Forms -->
+    <h2>Contact Form</h2>
+    <form action="">
+        <label for="fname"><b>First Name </b></label><br>
+        <input type="text" name="fname"><br>
+        <label for="lname"><b>Last Name </b></label><br>
+        <input type="text" name="lname"><br>
+        <label for="email"><b>Email</b></label><br>
+        <input type="email" name="email"><br> 
+        <label for="pass"><b>Password</b></label><br>
+        <input type="password" name="pass"><br> 
+        <label for="pass"><b>Retype Password</b></label><br>
+        <input type="password" name="pass"><br> 
+
+        <button onclick="alert('Information Sent')">Submit</button>
+    </form>
+
+    <!-- Links -->
+    <div>
+        <h2>Links</h2>
+        <a href="https://www.youtube.com/" target="_blank">Youtube</a><br>
+        <a href="https://www.google.com" target="_blank">Google</a>
+    </div>
+    
+
+</body>
+</html>

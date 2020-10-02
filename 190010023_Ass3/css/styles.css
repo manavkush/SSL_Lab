@@ -1,0 +1,32 @@
+body{
+    background-color: #f0ece3;
+}
+div{
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+form{
+    padding-left: 30px;
+}
+label{
+    margin-bottom: 10px;
+}
+.table{
+    border: 1px solid black;
+}
+button{
+    background-color: red ;
+}
+.block1{
+    background-color: cornsilk;
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
+.block2{
+    background-color: coral;
+    width: 50%;
+    float:right;
+}

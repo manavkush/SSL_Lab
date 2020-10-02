@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script>
+        function formCorrect() {
+            var x=document.getElementById("age");
+
+           if(x.value>=18 && x.value<=100)
+            {
+                window.alert("You are eligible!");
+                return true;
+            }
+            else
+            {
+                window.alert("You are not eligible");
+                return false;
+            }
+
+        }
+    </script>
+    <title>DL Eligibility Check</title>
+</head>
+<body>
+    <h1>Driver License Eligibility Check</h1>
+    <br>
+
+    <div class="Form" >
+        <form name="myForm" onsubmit=" return formCorrect()">
+            Age :
+            <input type="number" name="" id="age"><br>
+            <input  type="submit" name="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>

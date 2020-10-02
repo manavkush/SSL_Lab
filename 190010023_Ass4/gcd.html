@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCD Calculator</title>
+    <style>
+        body{
+            background-color: #ffc7c7;
+        }
+    </style>
+    <script>
+        function check() {
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            
+            for(var i=Math.min(n1,n2);i>=1;i--)
+            {
+                if(n1%i==0 && n2%i==0)
+                {
+                    alert("GCD is "+i);
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>GCD Calculator</h1><br>
+
+    <form name="myForm" onsubmit="check()">
+        <label for="num1" >Enter the first number: </label>
+        <input type="number" name="num1" id="n1"><br><br>
+        <label for="num2">Enter the second number: </label>
+        <input type="number" name="num2" id="n2"><br>
+        <input type="submit" name="Submit" id="str">
+    </form>
+
+</body>
+</html>
